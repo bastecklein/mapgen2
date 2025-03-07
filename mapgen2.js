@@ -17,8 +17,6 @@ export function GenerateBinaryTree(options) {
     let minWidth = 3 + roomPadding;
     let minHeight = 3 + roomPadding;
 
-    this.splitWay = null;
-
     let splitOptions = {
         minHeight: minHeight,
         minWidth: minWidth,
@@ -32,7 +30,8 @@ export function GenerateBinaryTree(options) {
         maxLevels: maxLevels,
         levelName: "X",
         maxWidth: maxWidth,
-        maxHeight: maxHeight
+        maxHeight: maxHeight,
+        splitWay: null
     };
 
     let splits = new BinaryTreeSplitter(splitOptions);
